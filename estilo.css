@@ -1,0 +1,299 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #FF7302;
+    color: white;
+    font-family: sans-serif;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.384);
+}
+
+header h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+h2 {
+    color: #FF7302;
+    text-align: center;
+    font-size: 40px;
+}
+
+nav {
+    padding: 10px;
+    font-family: sans-serif;
+    background-image: url(img_nav.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.nav-p {
+    color: white;
+    font-weight: 400;
+}
+
+.escVezes,
+.escNv {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.escNv button {
+    padding: 10px;
+    background-color: #FF7302;
+    border-radius: 2px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.288);
+}
+
+.escVezes button {
+    padding: 10px 30px;
+    background-color: #FF7302;
+    border-radius: 2px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.288);
+}
+
+p {
+    text-align: center;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+input,
+button {
+    border: none;
+}
+
+select {
+    margin: 0 5px;
+    padding: 5px;
+}
+
+#btn {
+    text-align: center;
+    background-color: #FF7302;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.295);
+    color: white;
+    margin-top: 20px;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.content-retorno {
+    position: absolute;
+    top: 130px;
+    left: 0;
+    right: 0;
+}
+
+.retorno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 50px;
+    border-radius: 5px;
+    background-color: #FF7302;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.295);
+    position: relative;
+}
+
+.retorno p {
+    text-align: center;
+    color: white;
+}
+
+.retorno-span {
+    color: aliceblue;
+    font-family: sans-serif;
+    padding: 8px 16px;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+
+}
+
+.retorno-span:hover {
+    background-color: white;
+    color: #FF7302;
+    transition: .3s;
+}
+
+#res1,
+#res2,
+#res3 {
+    font-family: sans-serif;
+    font-size: 18px;
+    color: white;
+
+}
+
+
+.fecharCardApk {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+li {
+    margin-bottom: 16px;
+    word-spacing: 1px;
+    text-align: justify;
+}
+
+section {
+    display: grid;
+    grid-template-areas:
+        'article article aside'
+        'article article promo'
+    ;
+}
+
+aside {
+    grid-area: aside;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & img {
+        width: 90%;
+    }
+
+}
+
+article {
+    width: 80%;
+    margin: 60px auto;
+    font-family: sans-serif;
+    grid-area: article;
+
+    & h3 {
+        margin-top: 32px;
+        text-align: center;
+        margin-bottom: 40px;
+        font-weight: bolder;
+    }
+
+    & p {
+        text-align: justify;
+    }
+}
+
+.promo {
+    grid-area: promo;
+}
+
+.promo-img {
+    width: 90%;
+    margin: auto;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.produto img {
+    margin-bottom: 16px;
+    width: 200px;
+}
+
+.produto {
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    position: relative;
+}
+
+.prop-produto,
+.titulo-produto,
+.preco-produto {
+    text-decoration: none;
+    color: #FF7302;
+}
+
+.prop-produto {
+    margin-top: 8px;
+}
+
+.preco-produto span {
+    font-size: 12px;
+    color: #ff7402ab;
+    font-weight: bold;
+}
+
+.btn-comprar {
+    background-color: #FF7302;
+    color: aliceblue;
+    padding: 8px 4px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 16px;
+    position: absolute;
+    bottom: 0;
+}
+
+@media screen and (max-width: 680px) {
+    .qrcode {
+        display: none;
+    }
+    h2{
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .cardApk {
+        width: 80%;
+        height: 400px;
+        font-size: 15px;
+        right: 5%;
+        top: 20%;
+    }
+
+    .content-intro {
+        width: 100%;
+    }
+
+    section {
+        display: grid;
+        grid-template-areas:
+            'aside'
+            'article'
+            'promo'
+        ;
+    }
+
+    .produtos {
+        grid-template-columns: 1fr;
+    }
+    .produto{
+        width: 100%;
+        margin: auto;
+    }
+    .produto img{
+        margin: auto;
+        width: 100%;
+    }
+}

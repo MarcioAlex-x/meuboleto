@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="M.png" type="image/x-icon">
+    <meta name="description"
+        content="Calculadora de boleto para Consultoras e Lideres da Natura por níveis de consultoria e quantidade de vezes aceitas.">
+    <meta name="description"
+        content="Atenção Consultora Natura, não fique sem saber o dia do vencimento do seu boleto Natura.">
+    <meta name="description"
+        content="Evite pagamentos de juros e multas por atrasos desnecessários dos seus boletos, calcule o dia do vencimento do seu boleto com uma aplicação gratuita agora mesmo.">
+
+    <!-- adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2658298313827553"
+        crossorigin="anonymous"></script>
+
+    <script src="jquery.js"></script>
+    <!-- nlitycs -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8QCR2ZGFV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-M8QCR2ZGFV');
+    </script>
+    <meta name="description"
+        content="Meu Boleto é uma página que vai te ajudar a ver os dias de vencimento dos seus boletos para vinte e um e trinta dias divididos    em até três vezes">
+
+    <title>Meu Boleto</title>
+</head>
+
+<body>
+    <header>
+        <h1>Meu Boleto Natura</h1>
+    </header>
+
+    <div id="info" style="color: red; margin: 20px; font-family: sans-serif;"></div>
+    <nav>
+        <p class="nav-p">
+            Informe o seu nível!
+        </p>
+        <div class="escNv">
+            <select id="n">
+                <option value="">Esccolha</option>
+                <option value="20">Semente/Bronze</option>
+                <option value="29">Prata/Ouro/Diamante</option>
+            </select>
+        </div>
+        <p class="nav-p">
+            Informe a data do pedido!
+        </p>
+        <div>
+            <select id="dia" required>
+                <option value="">Dia</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+            </select>
+            <select id="mes" required>
+                <option value="">Mês</option>
+                <option value="0">Janeiro</option>
+                <option value="01">Fevereiro</option>
+                <option value="02">Março</option>
+                <option value="03">Abril</option>
+                <option value="04">Maio</option>
+                <option value="05">Junho</option>
+                <option value="06">Julho</option>
+                <option value="07">Agosto</option>
+                <option value="08">Setembro</option>
+                <option value="09">Outubro</option>
+                <option value="10">Novembro</option>
+                <option value="11">Dezembro</option>
+            </select>
+            <select id="ano">
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+            </select>
+        </div>
+        <p class="nav-p">
+            Informe em quantas vezes o seu pedido foi parcelado!
+        </p>
+        <div class="escVezes">
+            <select id="v" required>
+                <option value="">Escolha</option>
+                <option value="1">1x</option>
+                <option value="2">2x</option>
+                <option value="3">3x</option>
+            </select>
+        </div>
+
+        <div><button id="btn">Calcular</button></div>
+    </nav>
+
+    <main>
+        <div class="content-retorno">
+            <div class="retorno">
+                <p id="msgRetorno">
+                    Seus resultados serão mostrados aqui quando forem selecionados todos os campos.
+                </p>
+                <div id="res1"></div>
+                <div id="res2"></div>
+                <div id="res3"></div>
+                <span class="retorno-span">Nova Consulta</span>
+            </div>
+        </div>
+    </main>
+    <section>
+        <article class="article-content">
+            <h2>Loja Meu Boleto</h2>
+            <div class="produtos">
+                <div class="produto">
+                    <a href="https://pay.kiwify.com.br/24sDBOQ?afid=fTeIsE31"  target="_blank">
+                        <img src="https://aws-assets.kiwify.com.br/cdn-cgi/image/fit=scale-down,width=400/YfoQuLjNGhU2Lbv/24-horas_3da20406db2a41c093771ea82590a503.png" alt="Método Vendas Infinitas 2.0">
+                    </a>
+                
+                    <a href="https://pay.kiwify.com.br/24sDBOQ?afid=fTeIsE31" 
+                    class="titulo-produto targ" 
+                    target="_blank">Método Vendas Infinitas 2.0
+                    </a>
+
+                    <a href="https://www.instagram.com/gaby_labree"  
+                    target="_blank"
+                    class="prop-produto">por: Gabriella Labre</a>
+                    
+                    <p class="preco-produto">R$ 297,00 <span>em até 12x</span></p>
+                    <a href="https://pay.kiwify.com.br/24sDBOQ?afid=fTeIsE31" 
+                    target="_blank"
+                    class="btn-comprar">Comprar agora</a>
+                </div>
+
+                <div class="produto">
+                    <a href="https://pay.kiwify.com.br/P0yvave?afid=ZW1nf7XW"  
+                    target="_blank">
+                        <img src="https://assets.kiwify.com.br/cdn-cgi/image/fit=scale-down,width=400/adpgPPYHPKudhn1/CAPA-EMPODERAMENTO-DIGITAL-2_ccd82a513a834a57a3d092f2f55334fa.png" alt="Método Vendas Infinitas 2.0">
+                    </a>
+                
+                    <a href="https://pay.kiwify.com.br/P0yvave?afid=ZW1nf7XW"
+                    target="_blank"
+                    class="titulo-produto">Método Empoderamento Digital
+                    </a>
+                    <a href="https://www.instagram.com/lolla" 
+                    target="_blank"
+                    class="prop-produto">por: Lolla</a>
+                    <p class="preco-produto">R$ 297,00 <span>em até 12x</span></p>
+                    
+
+                    <a href="https://pay.kiwify.com.br/P0yvave?afid=ZW1nf7XW"
+                    target="_blank"
+                    class="btn-comprar">Comprar agora</a>
+                </div>
+                
+                <div class="produto">
+                    <a href="https://pay.kiwify.com.br/TtGibIr?afid=4TPNUh1z"
+                    target="_blank">
+                        <img src="https://maquiagemlucrativa.com.br/wp-content/uploads/2024/07/Design-sem-nome-1-5.png" alt="Método Vendas Infinitas 2.0">
+                    </a>
+                
+                    <a href="https://pay.kiwify.com.br/TtGibIr?afid=4TPNUh1z"
+                    target="_blank"
+                    class="titulo-produto">Maquiagem Profissional - Auto Maquiagem, Make Up Noivas
+                    </a>
+                    
+                    <a href="#" 
+                    target="_blank"
+                    class="prop-produto">por: Monevo</a>
+                    <p class="preco-produto">R$ 59,90 <span>em até 12x</span></p>
+                    <a href="https://pay.kiwify.com.br/TtGibIr?afid=4TPNUh1z"
+                    target="_blank"
+                    class="btn-comprar">Comprar agora</a>
+                </div>
+                <div class="produto">
+                    <a href="https://pay.kiwify.com.br/HS5JVk8?afid=DDj2kjNQ"
+                    target="_blank">
+                        <img src="https://aws-assets.kiwify.com.br/cdn-cgi/image/fit=scale-down,width=400/8F38bQPJChzAE1x/foto-de-perfil_e939ae1418af40d8aa7bed4f41471aa6.png" alt="Método Vendas Infinitas 2.0">
+                    </a>
+                
+                    <a href="https://pay.kiwify.com.br/HS5JVk8?afid=DDj2kjNQ" 
+                    target="_blank"
+                    class="titulo-produto">Nail Designer Profissional - Curso Completo Alongamento de Unhas
+                    </a>
+                    
+                    <a href="#" 
+                    target="_blank"
+                    class="prop-produto">por: Academia Nails</a>
+                    
+                    <p class="preco-produto">R$ 247,00 <span>em até 12x</span></p>
+                    <a href="https://pay.kiwify.com.br/HS5JVk8?afid=DDj2kjNQ"
+                    target="_blank"
+                    class="btn-comprar">Comprar agora</a>
+                </div>
+            </div>            
+        </article>
+
+        <aside>
+
+        </aside>
+    </section>
+    <div class="promo">
+
+    </div>
+   
+
+    <footer>
+        <p style="font-size: 16px; font-weight: 600; font-family: sans-serif; color: chocolate; margin-top: 80px;">
+            Desenvolvido com amor por Alex Freitas &copy;2023</p>
+        <p style="font-size: 16px; font-weight: 600; font-family: sans-serif; color: chocolate;">
+            Contato (83) 98765-7531
+        </p>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
